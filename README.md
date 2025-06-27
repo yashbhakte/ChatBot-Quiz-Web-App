@@ -34,11 +34,6 @@ A modern, responsive web application built with pure HTML, CSS, and JavaScript t
 - A modern web browser (Chrome, Firefox, Safari, Edge)
 - No additional dependencies or installations required
 
-### Installation
-1. Clone or download the project files
-2. Open `index.html` in your web browser
-3. Start using the application immediately!
-
 ### File Structure
 ```
 Chatbot Quiz Web App/
