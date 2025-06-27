@@ -87,19 +87,6 @@ Chatbot Quiz Web App/
 - **Cross-browser Compatible**: Works on all modern browsers
 - **Performance Optimized**: Fast loading and smooth interactions
 
-### Browser Support
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
-
-## 📱 Responsive Design
-
-The application is fully responsive and optimized for:
-- **Desktop**: Full-featured experience with large chat window
-- **Tablet**: Adapted layout with optimized spacing
-- **Mobile**: Touch-friendly interface with simplified navigation
-
 ## 🎨 Customization
 
 ### Adding New Chatbot Questions
@@ -120,19 +107,6 @@ Edit the `aptitudeQuestions.js` file:
     correct: 0 // Index of correct answer (0-3)
 }
 ```
-
-### Enhanced Question Shuffling
-The quiz system includes advanced shuffling logic:
-- **History Tracking**: Remembers recently used questions
-- **Variety Assurance**: Ensures different questions on each attempt
-- **Smart Reset**: Automatically resets when running low on unique questions
-- **Dynamic Loading**: Adapts to the number of available questions
-
-### Styling Customization
-- Modify colors in `styles.css`
-- Adjust animations and transitions
-- Customize fonts and spacing
-- Update gradient backgrounds
 
 ## 🔧 Development
 
@@ -156,20 +130,5 @@ The quiz system includes advanced shuffling logic:
 - **Error Handling**: Graceful fallbacks if files fail to load
 - **Dynamic Updates**: Easy to modify questions without touching main code
 
-## 📄 License
+![ChatBot Quiz Web App thumbnail](https://github.com/user-attachments/assets/c027f34f-5094-4028-8ad3-47df641349d5)
 
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📞 Support
-
-If you have any questions or need help with the application, please open an issue in the project repository.
-
----
-
-**Built with ❤️ using HTML, CSS & JavaScript**
-
-*Enjoy using the Chatbot Quiz Web App!* 
