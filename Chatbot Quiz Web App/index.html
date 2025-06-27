@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Quiz Web App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Favicon: Robot Head SVG as Data URI -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'%3E%3Ccircle cx='19' cy='19' r='19' fill='%23f4f6fb'/%3E%3Crect x='8' y='13' width='22' height='14' rx='7' fill='%236c63ff'/%3E%3Cellipse cx='14' cy='20' rx='2.5' ry='2.5' fill='%23fff'/%3E%3Cellipse cx='24' cy='20' rx='2.5' ry='2.5' fill='%23fff'/%3E%3Cellipse cx='14' cy='20' rx='1.2' ry='1.2' fill='%23222'/%3E%3Cellipse cx='24' cy='20' rx='1.2' ry='1.2' fill='%23222'/%3E%3Crect x='15' y='25' width='8' height='2' rx='1' fill='%23fff'/%3E%3Crect x='17.5' y='7' width='3' height='6' rx='1.5' fill='%236c63ff'/%3E%3Ccircle cx='8' cy='17' r='1.5' fill='%236c63ff'/%3E%3Ccircle cx='30' cy='17' r='1.5' fill='%236c63ff'/%3E%3C/svg%3E">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="app-title"><span class="logo-avatar" aria-label="Chatbot" title="Chatbot">
+                <!-- Friendly Robot Head SVG Icon -->
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;margin-right:8px;" aria-label="Chatbot Logo" role="img">
+                  <circle cx="19" cy="19" r="19" fill="#f4f6fb"/>
+                  <rect x="8" y="13" width="22" height="14" rx="7" fill="#6c63ff"/>
+                  <ellipse cx="14" cy="20" rx="2.5" ry="2.5" fill="#fff"/>
+                  <ellipse cx="24" cy="20" rx="2.5" ry="2.5" fill="#fff"/>
+                  <ellipse cx="14" cy="20" rx="1.2" ry="1.2" fill="#222"/>
+                  <ellipse cx="24" cy="20" rx="1.2" ry="1.2" fill="#222"/>
+                  <rect x="15" y="25" width="8" height="2" rx="1" fill="#fff"/>
+                  <rect x="17.5" y="7" width="3" height="6" rx="1.5" fill="#6c63ff"/>
+                  <circle cx="8" cy="17" r="1.5" fill="#6c63ff"/>
+                  <circle cx="30" cy="17" r="1.5" fill="#6c63ff"/>
+                </svg>
+            </span>Chatbot Quiz Web App</h1>
+            <p class="app-subtitle">Interactive AI Chat & Knowledge Quiz</p>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="chatbot">
+                <span class="tab-icon">💬</span>
+                Chatbot
+            </button>
+            <button class="tab-btn" data-tab="quiz">
+                <span class="tab-icon">🧠</span>
+                Quiz
+            </button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Chatbot Section -->
+            <section id="chatbot" class="section active">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <h2>AI Assistant</h2>
+                        <p>Ask me anything! I'm here to help.</p>
+                    </div>
+                    
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message bot-message">
+                            <div class="message-avatar realistic-avatar">
+                                <!-- Friendly Robot Head SVG Icon -->
+                                <svg width="32" height="32" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Chatbot Avatar" role="img">
+                                  <circle cx="19" cy="19" r="19" fill="#f4f6fb"/>
+                                  <rect x="8" y="13" width="22" height="14" rx="7" fill="#6c63ff"/>
+                                  <ellipse cx="14" cy="20" rx="2.5" ry="2.5" fill="#fff"/>
+                                  <ellipse cx="24" cy="20" rx="2.5" ry="2.5" fill="#fff"/>
+                                  <ellipse cx="14" cy="20" rx="1.2" ry="1.2" fill="#222"/>
+                                  <ellipse cx="24" cy="20" rx="1.2" ry="1.2" fill="#222"/>
+                                  <rect x="15" y="25" width="8" height="2" rx="1" fill="#fff"/>
+                                  <rect x="17.5" y="7" width="3" height="6" rx="1.5" fill="#6c63ff"/>
+                                  <circle cx="8" cy="17" r="1.5" fill="#6c63ff"/>
+                                  <circle cx="30" cy="17" r="1.5" fill="#6c63ff"/>
+                                </svg>
+                            </div>
+                            <div class="message-content">
+                                <p>Hello! I'm your AI assistant. How can I help you today?</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input-container">
+                        <input type="text" id="chatInput" placeholder="Type your message here..." maxlength="200">
+                        <button id="sendBtn" class="send-btn">
+                            <span>Send</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quiz Section -->
+            <section id="quiz" class="section">
+                <div class="quiz-container">
+                    <div class="quiz-header">
+                        <h2>Knowledge Quiz</h2>
+                        <p>Test your knowledge with our interactive quiz!</p>
+                    </div>
+                    
+                    <div class="quiz-content" id="quizContent">
+                        <div class="quiz-start">
+                            <div class="start-card">
+                                <h3>Ready to test your knowledge?</h3>
+                                <p>This quiz contains 10 questions covering various topics. Good luck!</p>
+                                <button id="startQuizBtn" class="start-btn">Start Quiz</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Chatbot Quiz Web App. Built with ❤️ using HTML, CSS & JavaScript.</p>
+        </footer>
+    </div>
+
+    <!-- External Question Files -->
+    <script src="aiQuestions.js"></script>
+    <script src="aptitudeQuestions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
